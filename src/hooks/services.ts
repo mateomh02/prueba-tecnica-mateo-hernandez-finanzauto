@@ -68,7 +68,7 @@ export const useFetchData = () => {
     const fetchDataDelete = useCallback(async (id: number) => {
         setIsLoading(true)
         try {
-            const response = await fetch(`https://dummyapi.io/data/v1/user/${id}`, {
+            await fetch(`https://dummyapi.io/data/v1/user/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'app-id': '63473330c1927d386ca6a3a5',
@@ -87,7 +87,7 @@ export const useFetchData = () => {
     const fetchDataUpdate = useCallback(async (id: number, userData: { id: string; firstName: string; lastName: string; picture: string; title: string; gender: string; phone: number;}) => {
         setIsLoading(true)
         try {
-            const response = await fetch(`https://dummyapi.io/data/v1/user/${id}`, {
+            await fetch(`https://dummyapi.io/data/v1/user/${id}`, {
                 method: 'PUT',
                 headers: {
                     'app-id': '63473330c1927d386ca6a3a5',
